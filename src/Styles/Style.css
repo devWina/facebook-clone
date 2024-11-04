@@ -10,6 +10,8 @@
   --bg-gray: #d9d9d9;
   --bg-light-gray: #edecf1;
   --home-blue: #1579f3;
+  --text-gray: #73767b;
+  --white: #fff;
 }
 
 body {
@@ -19,4 +21,235 @@ body {
 .App {
   width: 100%;
   height: 100vh;
+
+  .App-inner {
+    position: relative;
+    display: flex;
+    font-family: var(--fonts);
+
+    .user-accessibility {
+      z-index: 10;
+      padding: 0px 0px 0px 15px;
+      width: 23%;
+
+      .options {
+        width: 94%;
+        display: flex;
+        flex-direction: column;
+        border-bottom: 2px solid var(--bg-gray);
+
+        div {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          p {
+            font-weight: 500;
+          }
+        }
+        .user-profile {
+          img {
+            width: 30px;
+          }
+        }
+        .friends {
+          padding: 0px 0px 0px 4px;
+        }
+        .memories {
+          img {
+            width: 32px;
+          }
+        }
+        .video {
+          img {
+            width: 32px;
+          }
+        }
+        .gaming {
+          img {
+            width: 32px;
+          }
+        }
+        .more {
+          margin-bottom: 20px;
+          .see {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-gray);
+            border-radius: 50%;
+            padding: 0.1rem;
+            width: 1.9rem;
+          }
+        }
+      }
+
+      .shortcuts {
+        width: 94%;
+        margin-bottom: 6rem;
+
+        h3 {
+          color: var(--text-gray);
+          text-align: start;
+        }
+        .option {
+          div {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            p {
+              font-weight: 500;
+            }
+          }
+        }
+      }
+
+      footer {
+        text-align: start;
+        color: var(--text-gray);
+        font-size: 15px;
+        margin: 20px 0;
+      }
+    }
+    .user-feed {
+      width: 55%;
+      background-color: var(--bg-light-gray);
+    }
+    .suggestion-section {
+      width: 22%;
+      box-shadow: -3px 0px 6px -1px rgba(0, 0, 0, 0.15);
+      padding: 0 8px;
+
+      h3 {
+        color: var(--text-gray);
+        text-align: start;
+      }
+      .suggested {
+        width: 100%;
+        height: 200px;
+
+        .hd {
+          border-radius: 10px 10px 0 0;
+          background-color: red;
+          height: 80%;
+
+          .overlay {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px 10px 0 0;
+            background: rgba(0, 0, 0, 0.3);
+
+            .content {
+              padding: 0 0 0 15px;
+              width: 60%;
+              display: flex;
+              flex-direction: column;
+              gap: 0.4rem;
+
+              .heading {
+                display: flex;
+                align-items: center;
+                gap: 0.4rem;
+
+                img {
+                  background: var(--white);
+                  border-radius: 50%;
+                  padding: 0.2rem;
+                  /* width: 1.5rem; */
+                }
+
+                h4 {
+                  margin: 0;
+                  color: var(--white);
+                  letter-spacing: 0.8px;
+                }
+              }
+              .paragraph {
+                p {
+                  margin: 0;
+                  color: var(--white);
+                  font-weight: 500;
+                  text-align: start;
+                }
+              }
+              .btn {
+                width: 100%;
+                button {
+                  width: 100%;
+                  background: var(--white);
+                  border: none;
+                  font-weight: 600;
+                  border-radius: 8px;
+                  padding: 10px 0;
+                }
+              }
+            }
+          }
+        }
+
+        .description {
+          height: 20%;
+          border-radius: 0 0 10px 10px;
+          border: 1px solid var(--bg-gray);
+          box-shadow: 0px 1px 10px -2px rgba(0, 0, 0, 0.35);
+
+          .description-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            .description-content-imgs {
+              display: flex;
+              align-items: center;
+
+              img {
+                height: 1.2rem;
+                width: 1.2rem;
+                border-radius: 50%;
+
+                /* Overlapping the images close to each other using negative margin "I myself didn't know that, lol :D */
+                margin-right: -0.6rem;
+                border: 2px solid #fdf2e9;
+                &:last-child {
+                  margin: 0;
+                }
+              }
+            }
+            .description-content-text {
+              font-size: 0.8rem;
+              font-weight: 600;
+              color: var(--text-gray);
+            }
+          }
+        }
+      }
+
+      .contacts {
+        .contact-list {
+          display: flex;
+          flex-direction: column;
+          gap: 0.8rem;
+
+          div {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+
+            img {
+              height: 2.2rem;
+              width: 2.2rem;
+              border-radius: 50%;
+            }
+
+            p {
+              margin: 0;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+  }
 }
